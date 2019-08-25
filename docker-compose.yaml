@@ -1,0 +1,26 @@
+version: "3.5"
+services:
+  dns:
+    container_name: dns
+    image: defreitas/dns-proxy-server
+    hostname: dns
+    ports:
+      - 5380:5380
+    volumes:
+      - /opt/dns-proxy-server/conf:/app/conf
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/resolv.conf:/etc/resolv.conf
+    networks:
+      - ctf
+  nc1:
+    container_name: nc1
+    image: ncs-ctf-netcat
+    build:
+      context: ./Dockerfiles
+      dockerfile: Dockerfile.netcat
+    hostname: nc1
+    networks:
+      - ctf
+networks:
+  ctf:
+    external: false

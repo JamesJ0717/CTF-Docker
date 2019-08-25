@@ -1,0 +1,9 @@
+FROM ubuntu
+
+# update and upgrade
+RUN apt update && apt full-upgrade -y
+
+# install netcat
+RUN apt install netcat -y
+
+CMD cat /etc/hosts

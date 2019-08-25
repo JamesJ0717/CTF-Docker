@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  ctf-docker:
+    image: ctf-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - :
