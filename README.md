@@ -19,4 +19,6 @@ Docker is an awesome tool that I think everyone should have some knowledge of, e
 
 ### Docker-Compose
 
-`docker-compose` is a command line tool used for orchestrating multiple containers easily. There is a file called `docker-compose.yaml` that contains information about the container you want to create. ![docker-compose.yaml](carbon.png) This is a pretty simple docker-compose file. As you can see, there are two containers being created, `dns` and `nc1`. These containers each have their own image, hostname, port mappings, and volumes, but share a network.
+`docker-compose` is a command line tool used for orchestrating multiple containers easily. There is a file called `docker-compose.yaml` that contains information about the container you want to create.
+![docker-compose.yaml](Resources/carbon.png =250px)
+This is a pretty simple docker-compose file. As you can see, there are two containers being created, `dns` and `nc1`. These containers each have their own image, hostname, port mappings, and volumes, but share a network.
